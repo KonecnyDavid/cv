@@ -23,4 +23,5 @@ jobs:
       with:
         server: 264504.w4.wedos.net
         username: w264504_cv
+        local-dir: ./build/
         password: ${{ secrets.password }}
