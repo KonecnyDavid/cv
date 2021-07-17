@@ -1,5 +1,4 @@
 import {
-    Card,
     Container,
     Grid,
     Header,
@@ -14,7 +13,7 @@ import React from "react";
 function App() {
     return (
         <Container>
-            <div style={{ height: "4rem" }}></div>
+            {/* <div style={{ height: "4rem" }}></div> */}
             <Header as="h1" size="huge">
                 <Header.Content>
                     David Konečný
@@ -145,111 +144,146 @@ function App() {
             <Grid>
                 <Grid.Row>
                     <Grid.Column width={8}>
-                        <Card fluid>
-                            <Card.Content>
-                                <Card.Header>GRAWEB ISG</Card.Header>
-                                <Card.Meta>Graweb</Card.Meta>
-                                <Card.Description>
-                                    ISG je ERP a CRM systém na evidenci práce a
-                                    zákazníků.
-                                </Card.Description>
-                            </Card.Content>
-                            <Card.Content extra>
-                                <Label size="tiny">Symfony</Label>
-                                <Label size="tiny">React</Label>
-                                <Label size="tiny">SASS</Label>
-                            </Card.Content>
-                        </Card>
-                        <Card fluid>
-                            <Card.Content>
-                                <Card.Header>KIP Admin</Card.Header>
-                                <Card.Meta>KIP Brno</Card.Meta>
-                                <Card.Description>
-                                    ERP systém na výkazání práce zaměstnanců.
-                                </Card.Description>
-                            </Card.Content>
-                            <Card.Content extra>
-                                <Label size="tiny">Symfony</Label>
-                            </Card.Content>
-                        </Card>
-                        <Card fluid>
-                            <Card.Content>
-                                <Card.Header>Burza dopravy</Card.Header>
-                                <Card.Meta>Agrotec | Graweb</Card.Meta>
-                                <Card.Description>
-                                    Burza přepravy nákladů.
-                                </Card.Description>
-                            </Card.Content>
-                            <Card.Content extra>
-                                <Label size="tiny">Symfony</Label>
-                            </Card.Content>
-                        </Card>
-                        <Card
-                            fluid
-                            href="https://konecnydavid.github.io/rozbory/"
-                        >
-                            <Card.Content>
-                                <Card.Header>Maturitní rozbory</Card.Header>
-                                <Card.Meta>Maturitní rozbory</Card.Meta>
-                                <Card.Description>
-                                    Webový portál obsahující zpracované
-                                    maturitní rozbory.
-                                </Card.Description>
-                            </Card.Content>
-                            <Card.Content extra>
-                                <Label size="tiny">Next.js</Label>
-                                <Label size="tiny">Express</Label>
-                            </Card.Content>
-                        </Card>
+                        <section style={{marginBottom: "1rem"}}>
+                            <Header as="h5">
+                                <Header.Content>
+                                    GRAWEB ISG
+                                    <Header.Subheader>Graweb</Header.Subheader>
+                                </Header.Content>
+                            </Header>
+                            <div
+                                style={{
+                                    marginTop: "-.75rem",
+                                    marginBottom: ".25rem",
+                                }}
+                            >
+                                ISG je ERP a CRM systém na evidenci práce a
+                                zákazníků.
+                            </div>
+                            <Label size="tiny">Symfony</Label>
+                            <Label size="tiny">React</Label>
+                            <Label size="tiny">SASS</Label>
+                        </section>
+                        <section style={{marginBottom: "1rem"}}>
+                            <Header as="h5">
+                                <Header.Content>
+                                    KIP Admin
+                                    <Header.Subheader>
+                                        KIP Brno
+                                    </Header.Subheader>
+                                </Header.Content>
+                            </Header>
+                            <div
+                                style={{
+                                    marginTop: "-.75rem",
+                                    marginBottom: ".25rem",
+                                }}
+                            >
+                                ERP systém na výkazání práce zaměstnanců.
+                            </div>
+                            <Label size="tiny">Symfony</Label>
+                        </section>
+                        <section style={{marginBottom: "1rem"}}>
+                            <Header as="h5">
+                                <Header.Content>
+                                    Burza dopravy
+                                    <Header.Subheader>
+                                        Agrotec | Graweb
+                                    </Header.Subheader>
+                                </Header.Content>
+                            </Header>
+                            <div
+                                style={{
+                                    marginTop: "-.75rem",
+                                    marginBottom: ".25rem",
+                                }}
+                            >
+                                Burza přepravy nákladů.
+                            </div>
+                            <Label size="tiny">Symfony</Label>
+                        </section>
+                        <section>
+                            <Header as="h5">
+                                <Header.Content>
+                                    Maturitní rozbory
+                                    <Header.Subheader>
+                                        Maturitní rozbory
+                                    </Header.Subheader>
+                                </Header.Content>
+                            </Header>
+                            <div
+                                style={{
+                                    marginTop: "-.75rem",
+                                    marginBottom: ".25rem",
+                                }}
+                            >
+                                Webový portál obsahující zpracované maturitní
+                                rozbory.
+                            </div>
+                            <Label size="tiny">Next.js</Label>
+                            <Label size="tiny">Express</Label>
+                        </section>
                     </Grid.Column>
                     <Grid.Column width={8}>
-                        <Card
-                            fluid
-                            href="https://uloziste.tiskarnahustopece.cz/"
-                        >
-                            <Card.Content>
-                                <Card.Header>Graweb Uložistě</Card.Header>
-                                <Card.Meta>Graweb</Card.Meta>
-                                <Card.Description>
-                                    Webová aplikace sloužící k nahrávání
-                                    grafických podkladů.
-                                </Card.Description>
-                            </Card.Content>
-                            <Card.Content extra>
-                                <Label size="tiny">Symfony</Label>
-                                <Label size="tiny">React</Label>
-                            </Card.Content>
-                        </Card>
-                        <Card fluid>
-                            <Card.Content>
-                                <Card.Header>
+                        <section style={{marginBottom: "1rem"}}>
+                            <Header as="h5">
+                                <Header.Content>
+                                    Graweb Uložistě
+                                    <Header.Subheader>Graweb</Header.Subheader>
+                                </Header.Content>
+                            </Header>
+                            <div
+                                style={{
+                                    marginTop: "-.75rem",
+                                    marginBottom: ".25rem",
+                                }}
+                            >
+                                Webová aplikace sloužící k nahrávání grafických
+                                podkladů.
+                            </div>
+                            <Label size="tiny">Symfony</Label>
+                            <Label size="tiny">React</Label>
+                        </section>
+                        <section style={{marginBottom: "1rem"}}>
+                            <Header as="h5">
+                                <Header.Content>
                                     Přehrávač edukačních videí
-                                </Card.Header>
-                                <Card.Meta>
-                                    Technické muzeum v Brně | Graweb
-                                </Card.Meta>
-                                <Card.Description>
-                                    Desktopvá aplikace na přehrávání
-                                    edukativních videí.
-                                </Card.Description>
-                            </Card.Content>
-                            <Card.Content extra>
-                                <Label size="tiny">Electron</Label>
-                                <Label size="tiny">React</Label>
-                            </Card.Content>
-                        </Card>
-                        <Card fluid href="https://drunk-cards.cz/">
-                            <Card.Content>
-                                <Card.Header>Drunk cards</Card.Header>
-                                <Card.Meta>Drunk cards</Card.Meta>
-                                <Card.Description>
-                                    Webová karetní hra na party.
-                                </Card.Description>
-                            </Card.Content>
-                            <Card.Content extra>
-                                <Label size="tiny">React</Label>
-                            </Card.Content>
-                        </Card>
+                                    <Header.Subheader>
+                                        Technické muzeum v Brně | Graweb
+                                    </Header.Subheader>
+                                </Header.Content>
+                            </Header>
+                            <div
+                                style={{
+                                    marginTop: "-.75rem",
+                                    marginBottom: ".25rem",
+                                }}
+                            >
+                                Desktopvá aplikace na přehrávání edukativních
+                                videí.
+                            </div>
+                            <Label size="tiny">Electron</Label>
+                            <Label size="tiny">React</Label>
+                        </section>
+                        <section>
+                            <Header as="h5">
+                                <Header.Content>
+                                    Drunk cards
+                                    <Header.Subheader>
+                                        Drunk cards
+                                    </Header.Subheader>
+                                </Header.Content>
+                            </Header>
+                            <div
+                                style={{
+                                    marginTop: "-.75rem",
+                                    marginBottom: ".25rem",
+                                }}
+                            >
+                                Webová karetní hra na party.
+                            </div>
+                            <Label size="tiny">React</Label>
+                        </section>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>
