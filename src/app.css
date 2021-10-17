@@ -1,0 +1,17 @@
+.skill-container {
+    margin-top: -.5rem;
+}
+
+.skill-container > .label {
+    margin-top: .5rem;
+}
+
+.top-space {
+    margin-top: 4rem;
+}
+
+@media print {
+    .top-space {
+        display: none;
+    }
+}

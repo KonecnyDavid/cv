@@ -1,3 +1,5 @@
+import "./app.css";
+
 import {
     Container,
     Grid,
@@ -13,7 +15,7 @@ import React from "react";
 function App() {
     return (
         <Container>
-            {/* <div style={{ height: "4rem" }}></div> */}
+            <div className="top-space"></div>
             <Header as="h1" size="huge">
                 <Header.Content>
                     David Konečný
@@ -47,9 +49,9 @@ function App() {
                 />
             </List>
             <Header as="h2" content="Zkušenosti"></Header>
-            <div>
+            <div className="skill-container">
                 <Label color="blue" size={"large"}>
-                    Typescript
+                    <strong>Typescript</strong>
                 </Label>
                 <Label color="blue" size={"large"}>
                     React
@@ -61,7 +63,13 @@ function App() {
                     Symfony
                 </Label>
                 <Label color="blue" size={"large"}>
+                    Rust
+                </Label>
+                <Label color="blue" size={"large"}>
                     Docker/Deployment
+                </Label>
+                <Label color="blue" size={"large"}>
+                    CI/CD
                 </Label>
                 <Label color="blue" size={"large"}>
                     C/C++, Python a Java
@@ -83,6 +91,9 @@ function App() {
                 </Label>
                 <Label color="blue" size={"large"}>
                     Git
+                </Label>
+                <Label color="blue" size={"large"}>
+                    Haskell
                 </Label>
             </div>
             <Header as="h2" content="Vzdělání"></Header>
@@ -131,7 +142,7 @@ function App() {
                             <span className="price">Homecredit | Brno</span>
                         </Item.Meta>
                         <Item.Description>
-                            Ve firmě Homecredit pracuji jako IT podpora, kdy
+                            Ve firmě Homecredit pracuji jako IT podpora, kde
                             zpracovávám a řeším požadavky.
                         </Item.Description>
                         <Item.Extra>
