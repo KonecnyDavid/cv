@@ -1,6 +1,6 @@
 import "./app.css";
 
-import { Container, Grid, Header, Icon, Item, Label } from "semantic-ui-react";
+import { Container, Grid, Header, Icon, Label } from "semantic-ui-react";
 import { Project, projects } from "./data/projects";
 import React, { useState } from "react";
 
