@@ -1,0 +1,16 @@
+export const skills = [
+    { name: "Typescript", selected: false },
+    { name: "Next.js", selected: false },
+    { name: "React", selected: false },
+    { name: "Symfony", selected: false },
+    { name: "Docker/Deployment", selected: false },
+    { name: "Rust", selected: false },
+    { name: "CI/CD", selected: false },
+    { name: "Angličtina B2", selected: false },
+    { name: "C/C++", selected: false },
+    { name: "Python", selected: false },
+    { name: "Node", selected: false },
+    { name: "Správa projektu", selected: false },
+    { name: "Haskell", selected: false },
+    { name: "Linux", selected: false },
+]
