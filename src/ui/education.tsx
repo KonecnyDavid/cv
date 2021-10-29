@@ -15,7 +15,7 @@ export const Education = () => (
                     <Item.Description>
                         Studium informatiky mi přínáší mnoho nových dovedností,
                         které bych chtěl dále rozvíjet v praxi. Mé zaměření je
-                        spíše na projektové řízení a systémovou architekturu.
+                        spíše na projektové řízení a softwarovou architekturu.
                     </Item.Description>
                     <Item.Extra>
                         <Icon name="calendar" /> 2019 - dosud

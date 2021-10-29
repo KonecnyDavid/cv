@@ -12,7 +12,8 @@ export const Work = () => (
                     </Item.Meta>
                     <Item.Description>
                         Pro firmu vyvíjím interní aplikace a systémy pro externí
-                        klienty.
+                        klienty. Setkal jsem se s vývojem webových aplikací,
+                        rozsáhlých informačích systémů a desktopových aplikací.
                     </Item.Description>
                     <Item.Extra>
                         <Icon name="calendar" /> 2017 - dosud
@@ -27,7 +28,9 @@ export const Work = () => (
                     </Item.Meta>
                     <Item.Description>
                         Ve firmě Homecredit pracuji jako IT podpora, kde
-                        zpracovávám a řeším požadavky.
+                        zpracovávám a řeším interní požadavky. Získal jsem zde
+                        zkušenosti s komunikací a se právou informačnách
+                        systémů.
                     </Item.Description>
                     <Item.Extra>
                         <Icon name="calendar" /> 2018 - dosud

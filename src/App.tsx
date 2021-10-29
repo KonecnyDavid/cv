@@ -5,12 +5,12 @@ import { Project, projects } from "./data/projects";
 import React, { useState } from "react";
 
 import { AppHeader } from "./ui/header";
+import { Education } from "./ui/education";
 import { Work } from "./ui/work";
-import {skills as defaultSkills} from "./data/skills";
+import { skills as defaultSkills } from "./data/skills";
 
 function App() {
     const [skills, setSkills] = useState(defaultSkills);
-    const [selected, setSelected] = useState<string[]>([]);
 
     const handleSelect = (index_to_select: number) => {
         const newSelected: string[] = [];
@@ -28,21 +28,28 @@ function App() {
                 return skill;
             })
         );
-        setSelected(newSelected);
     };
 
     const projectFilter = (project: Project) => {
+        const selected: Set<string> = new Set(
+            skills.filter((skill) => skill.selected).map((skill) => skill.name)
+        );
         return (
-            selected.length === 0 ||
-            selected.filter((skill) => project.skills.includes(skill)).length >
-                0
+            selected.size === 0 ||
+            project.skills.filter((skill) => selected.has(skill)).length > 0
         );
     };
 
+    const isSelected = (skill: string) => {
+        const selected: Set<string> = new Set(
+            skills.filter((skill) => skill.selected).map((skill) => skill.name)
+        );
+        return selected.has(skill);
+    };
+
     const clear = () => {
-        setSkills(skills.map(skill =>  ({...skill, selected: false})));
-        setSelected([]);
-    }
+        setSkills(skills.map((skill) => ({ ...skill, selected: false })));
+    };
 
     return (
         <Container>
@@ -59,9 +66,11 @@ function App() {
                         {skill.name}
                     </Label>
                 ))}
-                <Label className="cursor-pointer" size="large" onClick={clear}><Icon name="cancel" style={{margin: 0}}/></Label>
+                <Label className="cursor-pointer" size="large" onClick={clear}>
+                    <Icon name="cancel" style={{ margin: 0 }} />
+                </Label>
             </div>
-
+            <Education />
             <Work />
             <Header as="h2" content="Projekty"></Header>
             <Grid>
@@ -85,9 +94,19 @@ function App() {
                                 >
                                     {project.description}
                                 </div>
-                                {project.skills.map((skill) => (
-                                    
-                                    <Label size="tiny" color={selected.includes(skill)? "black": "blue"}>{skill}</Label>
+                                {project.skills.map((skill: string) => (
+                                    <>
+                                        {isSelected(skill) && (
+                                            <Label size="tiny" color={"black"}>
+                                                {skill}
+                                            </Label>
+                                        )}
+                                        {!isSelected(skill) && (
+                                            <Label size="tiny" color={"blue"}>
+                                                {skill}
+                                            </Label>
+                                        )}
+                                    </>
                                 ))}
                             </section>
                         </Grid.Column>
